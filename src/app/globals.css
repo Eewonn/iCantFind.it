@@ -7,22 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
+  --font-sans: var(--font-jetbrains-mono);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-display: var(--font-vt323);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -39,92 +26,285 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius-sm: 1px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 3px;
+  /* CTF accent palette */
+  --color-ctf-red: #f78166;
+  --color-ctf-green: #3fb950;
+  --color-ctf-blue: #58a6ff;
+  --color-ctf-purple: #d2a8ff;
+  --color-ctf-orange: #ffa657;
+  --color-ctf-teal: #39d3bb;
+  --color-surface: #0d1629;
+  --color-surface-2: #111e35;
+  --color-border-subtle: #1c2d44;
+  --color-text-muted: #607998;
 }
 
+/* Deep navy terminal — no light mode */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #080e1e;
+  --foreground: #c4d0de;
+  --card: #0d1629;
+  --card-foreground: #c4d0de;
+  --popover: #0d1629;
+  --popover-foreground: #c4d0de;
+  --primary: #f78166;
+  --primary-foreground: #080e1e;
+  --secondary: #111e35;
+  --secondary-foreground: #c4d0de;
+  --muted: #111e35;
+  --muted-foreground: #607998;
+  --accent: #111e35;
+  --accent-foreground: #c4d0de;
+  --destructive: #f78166;
+  --border: #1c2d44;
+  --input: #111e35;
+  --ring: #f78166;
+  --radius: 2px;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    border-radius: 0 !important;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-jetbrains-mono), monospace;
   }
-  html {
-    @apply font-sans;
-  }
+}
+
+/* ── CRT Scanlines (very subtle) ──────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.03) 3px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Phosphor Glow ────────────────────────────────────────── */
+.glow-red {
+  text-shadow:
+    0 0 6px rgba(247, 129, 102, 0.9),
+    0 0 14px rgba(247, 129, 102, 0.5),
+    0 0 28px rgba(247, 129, 102, 0.2);
+}
+
+.glow-green {
+  text-shadow:
+    0 0 6px rgba(63, 185, 80, 0.9),
+    0 0 14px rgba(63, 185, 80, 0.5),
+    0 0 28px rgba(63, 185, 80, 0.2);
+}
+
+.glow-border-red {
+  box-shadow:
+    0 0 0 1px rgba(247, 129, 102, 0.3),
+    0 0 12px rgba(247, 129, 102, 0.08),
+    inset 0 0 12px rgba(247, 129, 102, 0.03);
+}
+
+.glow-border-green {
+  box-shadow:
+    0 0 0 1px rgba(63, 185, 80, 0.3),
+    0 0 12px rgba(63, 185, 80, 0.08),
+    inset 0 0 12px rgba(63, 185, 80, 0.03);
+}
+
+.panel-ambient {
+  box-shadow:
+    0 0 40px rgba(247, 129, 102, 0.04),
+    0 0 80px rgba(247, 129, 102, 0.02);
+}
+
+/* ── Floating card — replaces hard borders ────────────────── */
+.card-float {
+  background: #0d1629;
+  box-shadow:
+    0 0 0 1px rgba(88, 130, 255, 0.09),
+    0 4px 24px rgba(0, 6, 22, 0.55),
+    0 1px 4px rgba(0, 6, 22, 0.4);
+}
+
+/* ── Animations ───────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}
+
+.cursor-blink {
+  animation: blink 1.1s step-start infinite;
+}
+
+.flicker {
+  animation: flicker 8s infinite;
+}
+
+/* ── Terminal panel chrome ────────────────────────────────── */
+.term-panel {
+  border: 1px solid var(--border);
+  background: var(--card);
+  position: relative;
+}
+
+.term-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.term-label {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-foreground);
+}
+
+.term-label-active {
+  color: #f78166;
+  text-shadow:
+    0 0 6px rgba(247, 129, 102, 0.7),
+    0 0 14px rgba(247, 129, 102, 0.3);
+}
+
+/* ── VT323 display class ──────────────────────────────────── */
+.font-display {
+  font-family: var(--font-vt323), monospace;
+  letter-spacing: 0.04em;
+}
+
+/* ── IBM Plex Sans for descriptions ──────────────────────── */
+.font-desc {
+  font-family: var(--font-ibm-plex-sans), system-ui, -apple-system, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: var(--muted-foreground);
+}
+
+/* ── Terminal button ──────────────────────────────────────── */
+.term-btn-primary {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f78166;
+  background: rgba(247, 129, 102, 0.1);
+  color: #f78166;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.term-btn-primary:hover {
+  background: rgba(247, 129, 102, 0.18);
+  box-shadow: 0 0 10px rgba(247, 129, 102, 0.2);
+}
+
+.term-btn-ghost {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+  border: 1px solid #1c2d44;
+  background: transparent;
+  color: #607998;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.term-btn-ghost:hover {
+  color: #c4d0de;
+  border-color: #607998;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #080e1e; }
+::-webkit-scrollbar-thumb { background: #1c2d44; }
+::-webkit-scrollbar-thumb:hover { background: #2a4060; }
+
+/* ── Input overrides ──────────────────────────────────────── */
+input, textarea {
+  font-family: var(--font-jetbrains-mono), monospace !important;
+}
+
+/* ── Row hover links (nav-style) ──────────────────────────── */
+.dash-row-link {
+  background: #0d1629;
+  border-left: 2px solid transparent;
+  transition: border-color 0.12s, background 0.12s;
+}
+.dash-row-link:hover {
+  border-left-color: #f78166;
+  background: rgba(247, 129, 102, 0.04);
+}
+
+.guide-category-link {
+  background: #0d1629;
+  border-left: 2px solid transparent;
+  transition: border-color 0.12s, background 0.12s;
+}
+.guide-category-link:hover {
+  border-left-color: #f78166;
+  background: rgba(247, 129, 102, 0.04);
+}
+
+.guide-platform-link {
+  background: #0d1629;
+  transition: background 0.12s;
+}
+.guide-platform-link:hover {
+  background: rgba(88, 166, 255, 0.05);
+}
+
+.guide-practice-link {
+  background: #0d1629;
+  transition: background 0.12s;
+}
+.guide-practice-link:hover {
+  background: rgba(88, 166, 255, 0.06);
+}
+
+/* ── Selection ────────────────────────────────────────────── */
+::selection {
+  background: rgba(247, 129, 102, 0.2);
+  color: #f78166;
+}
+
+/* ── Shiki syntax highlighting ────────────────────────────── */
+/* Strip shiki's default backgrounds so our container controls it */
+.shiki-wrap pre,
+.shiki-wrap code {
+  background: transparent !important;
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.75rem;
+  line-height: 1.25rem; /* matches leading-5 */
+  white-space: pre;
+  tab-size: 2;
 }
